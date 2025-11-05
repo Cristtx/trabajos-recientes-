@@ -1,0 +1,6 @@
+com\ventaboletosaviones\SysVentApp.class
+com\ventaboletosaviones\model\Cliente.class
+com\ventaboletosaviones\repository\ClienteRepository.class
+com\ventaboletosaviones\controller\ClienteController.class
+com\ventaboletosaviones\service\impl\ClienteServiceImpl.class
+com\ventaboletosaviones\service\ClienteService.class

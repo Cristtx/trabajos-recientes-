@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ventaboletosaviones.controller.ClienteController">
+    <children>
+        <VBox spacing="8" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
+            <Label text="Gestión de Clientes - VentaBoletosAviones" style="-fx-font-size:16px; -fx-font-weight:bold;"/>
+            <HBox spacing="6">
+                <TextField fx:id="txtBuscar" promptText="Buscar por nombre..."/>
+                <Button text="Buscar" onAction="#onBuscar"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Button text="Nuevo" onAction="#onNuevo"/>
+            </HBox>
+            <GridPane hgap="8" vgap="8">
+                <Label text="DNI/RUC:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="txtDni" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                <Label text="Nombres:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="txtNombres" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                <Label text="Rep. Legal:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="txtRepLegal" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+                <Label text="Email:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <TextField fx:id="txtEmail" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+                <HBox spacing="8" GridPane.rowIndex="4" GridPane.columnIndex="1" alignment="CENTER_RIGHT">
+                    <Button text="Guardar" onAction="#onGuardar"/>
+                    <Button text="Eliminar" onAction="#onEliminar"/>
+                </HBox>
+            </GridPane>
+            <TableView fx:id="tableClientes" prefHeight="320">
+                <columns>
+                    <TableColumn fx:id="colDni" text="DNI/RUC" prefWidth="150"/>
+                    <TableColumn fx:id="colNombres" text="Nombres" prefWidth="500"/>
+                </columns>
+            </TableView>
+            <Label fx:id="lblMsg" style="-fx-text-fill:green;"/>
+        </VBox>
+    </children>
+</AnchorPane>
